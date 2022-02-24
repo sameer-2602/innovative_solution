@@ -12,7 +12,6 @@ function fileUpload($fileName, $upload_path, $redirect_on, $post_field_name, $al
 //            $config['file_name'] = 'ram' ;
 
     $CI->load->library('upload', $config);
-    exit();
     if (!$CI->upload->do_upload($fileName)) {
         $error = array('error' => $CI->upload->display_errors());
         $CI->session->set_flashdata('error', $error['error']);

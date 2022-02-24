@@ -23,7 +23,7 @@ class Complaints_model extends CI_Model {
     public function get_single($id) {
         return $this->db->get_where('complaints', ['id' => $id])->row_array();
     }
-    public function replay(){
-        
-}
+    public function delete($id){
+        return $this->db->delete('complaints', ['id' => $id]);
+    }
 }

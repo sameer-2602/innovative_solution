@@ -9,7 +9,7 @@
             . "</div>";
         }
         ?>
-        <form class="form-group" action="" method="post" enctype="multipart/form-data">
+        <form class="form-group" action="add" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend><?= $page_heading; ?></legend>
                 <div class="control-group">
@@ -41,7 +41,7 @@
                 </div>
                 <hr>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary" name="sub">Add</button>
+                    <button type="submit" value="sub" class="btn btn-primary" name="sub">Add</button>
                     <button type="reset" class="btn btn-danger">Cancel</button>
                 </div>
             </fieldset>

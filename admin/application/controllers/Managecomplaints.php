@@ -30,11 +30,17 @@ class Managecomplaints extends CI_Controller {
     }
 
     public function view($user_id = "") {
-        $data['page_name'] = 'managecomplaints/view';
+            $data['page_name'] = 'managecomplaints/view';
             $data['page_heading'] = 'View';
             $data['slug'] = 'manage-complaints';
             $data['result'] = $this->complaints_model->get($user_id);
             $this->load->view('include/template', $data);
+    }
+    public function delete($user_id = "") {
+            if($user_id){
+                $this->complaints_model->delete($user_id);
+                redirect('managecomplaints');
+            }    
     }
 
 }

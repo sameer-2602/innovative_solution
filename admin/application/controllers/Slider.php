@@ -16,7 +16,6 @@ class Slider extends CI_Controller {
 
     public function add() {
         if (isset($_POST['sub'])) {
-
             $this->load->helper('fileupload_helper');
             $image_filed_name = 'slider_image';
             $post_field_name = 'image_name';

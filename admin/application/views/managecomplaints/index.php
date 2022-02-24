@@ -29,7 +29,7 @@
                                 
                                 <a href="<?=base_url()?>managecomplaints/view/<?=$val['user_id']?>" class="btn btn-warning" >view</a>
                                 <a href="<?=base_url()?>managecomplaints/reply/<?=$val['user_id']?>" class="btn btn-info" >Replay</a>
-                                <a href="<?=base_url()?>managecomplaints/delete/<?=$val['user_id']?>" class="btn btn-danger">Delete</a>
+                                <a href="<?=base_url()?>managecomplaints/delete/<?=$val['id']?>" class="btn btn-danger">Delete</a>
                             </td>  
                         </tr>
                         <?php endforeach; ?>

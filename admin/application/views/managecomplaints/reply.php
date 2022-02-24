@@ -4,7 +4,7 @@
         <div class="col-md-6" >
            
           
-                    <form class="form-horizontal" action="" method="post">
+                    <form class="form-horizontal" action="managecomplaints/reply" method="post">
                         <fieldset>
                             <legend><?= $page_heading; ?></legend>
                             <div class="control-group">
@@ -32,7 +32,7 @@
                             <br>
                             <div class="form-actions">
                                 <input type="hidden" name="user_id" value="<?=$result['user_id'];?>">
-                                <a href="<?= base_url();?>managecomplaints/reply" class="btn btn-info">SEND REPLY</a>
+                                <input type="submit" class="btn btn-info" name="sub" value="SEND REPLY">
                                 <button type="reset" class="btn btn-danger">Cancel</button>
                             </div>
                         </fieldset>

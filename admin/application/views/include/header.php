@@ -35,6 +35,10 @@ if(empty($this->session->user_data))
                 </button>
                 <a class="navbar-brand" href="<?=base_url();?>dashboard"><b style="color:lime;font-size: larger">INNOVATIVE</b> ADMIN</a>
             </div>
+<?php 
+if($this->session->userdata('user_data')->role_id == 1):
+?>
+
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
                     <li><?php if($slug=='dashboard'):?><li class="selected"><?php endif;?><a href="<?=base_url();?>dashboard"><i class="fa fa-bullseye"></i> Dashboard</a></li><br>
@@ -49,11 +53,18 @@ if(empty($this->session->user_data))
                     <li><?php if($slug=='logout'):?><li class="selected"><?php endif;?><a href="<?=base_url();?>login/logout"><i class="fa fa-bullseye"></i> Logout</a></li><br>
                     
                 </ul>
-                <ul class="nav navbar-nav navbar-right navbar-user">
+            </div>
+            <?php endif; ?>
+            <?php 
+if($this->session->userdata('user_data')->role_id == 2):
+?>
+   <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="active" class="nav navbar-nav side-nav">
+                    <li><?php if($slug=='dashboard'):?><li class="selected"><?php endif;?><a href="<?=base_url();?>dashboard"><i class="fa fa-bullseye"></i> Dashboard</a></li><br>
+                    <li><?php if($slug=='materials'):?><li class="selected"><?php endif;?><a href="<?=base_url();?>materials"><i class="fa fa-bullseye"></i> Materials</a></li><br>
+                    <li><?php if($slug=='logout'):?><li class="selected"><?php endif;?><a href="<?=base_url();?>login/logout"><i class="fa fa-bullseye"></i> Logout</a></li><br>
                     
-                    
-                    <li class="divider-vertical"></li>
-                   
                 </ul>
             </div>
+<?php endif; ?>
         </nav>
